@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<style>
+		div.photos ul {
+			display: flex;
+		}
+		div.photos ul li {
+			flex:1;
+			list-style: none;
+		}
+	</style>
+	<script src="node_modules/jquery/dist/jquery.js"></script>
+	<script src="node_modules/handlebars/dist/handlebars.js"></script>
+	
+	<script type="text/x-handlebars-template" id="photos_tempalte">
+	<h1>Photos</h1>
+	<ul>
+	{{#each this}}
+		<li><img src="{{thumbnailUrl}}" title="{{title}}"</li>
+	{{/each}}
+	</ul>
+	</script>
+
+	<script type="text/x-handlebars-template" id="album_tempalte">
+	<h1>Albums</h1>
+	<div>
+		<h2>{{title}}</h2>
+		<div class="photos">{{{photos}}}</div>
+	</div>
+	</script>
+
+</head>
+<body>
+	<main>
+		
+	</main>
+
+	<script src="index.js"></script>
+</body>
+</html>
